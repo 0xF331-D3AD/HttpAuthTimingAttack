@@ -58,6 +58,7 @@ public class FileSystemAuthenticator implements Authenticator {
                     .header("Content-Type", bodyPublisherFactory.getContentTypeHeader())
                     .setHeader("User-Agent", "Mozilla/5.0 (X11; Windows x86_64; rv:100.0) Gecko/20100101 Firefox/100.0");
 
+            // TODO: When method is GET, no data is sent
             Map<String, String> formData = new HashMap<>();
             formData.put(dto.getUsernameFormParameter(), credentials.getUsername());
             formData.put(dto.getPasswordFormParameter(), credentials.getPassword());
